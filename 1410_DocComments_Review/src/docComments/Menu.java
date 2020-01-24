@@ -85,7 +85,7 @@ public class Menu {
 					}else if(searchId != el.getId()){
 						System.out.println("ID not found.");
 					}
-					//TODO: Enter logic check, "ID not found"					
+					//TODO: Enter logic check, "ID not found" to only print one time					
 				}
 				
 				break;
@@ -98,7 +98,7 @@ public class Menu {
 				int deleteEl = phones.indexOf(deleteId);
 				System.out.println(deleteEl);
 				
-				break;
+				break;//TODO: Need to find out how to find index based off ID and then do the phones.remove();
 				
 			case 5:
 				int numOfPhone = 0;
