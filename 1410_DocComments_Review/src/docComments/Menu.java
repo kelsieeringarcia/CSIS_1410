@@ -20,7 +20,7 @@ public class Menu {
 		
 		
 		
-		System.out.println("1. Show all phones");
+		/*System.out.println("1. Show all phones");
 		System.out.println("2. Add a phone");
 		System.out.println("3. Find a phone");
 		System.out.println("4. Delete a phone");
@@ -29,9 +29,19 @@ public class Menu {
 		System.out.print("Enter your selection: ");
 		
 		selection = input.nextInt();
-		System.out.println("");
+		System.out.println("");*/
 		
 		do {
+			System.out.println("1. Show all phones");
+			System.out.println("2. Add a phone");
+			System.out.println("3. Find a phone");
+			System.out.println("4. Delete a phone");
+			System.out.println("5. Number of phones");
+			System.out.println("6. Exit");
+			System.out.print("Enter your selection: ");
+			
+			selection = input.nextInt();
+			//System.out.println("");
 			switch(selection) {
 			case 1:
 				for(Phone el : phones) {
@@ -72,14 +82,35 @@ public class Menu {
 				for(Phone el: phones) {
 					if(searchId == el.getId()) {
 						System.out.println(el);
+					}else if(searchId != el.getId()){
+						System.out.println("ID not found.");
 					}
-					//TODO: Enter logic check, "ID not found"
-					
+					//TODO: Enter logic check, "ID not found"					
 				}
 				
 				break;
+			case 4:
+				int deleteId;
 				
+				System.out.print("Id: ");
+				deleteId = input.nextInt();
 				
+				int deleteEl = phones.indexOf(deleteId);
+				System.out.println(deleteEl);
+				
+				break;
+				
+			case 5:
+				int numOfPhone = 0;
+				for(int i = 0; i <= phones.size(); i++) {
+					numOfPhone++;
+				}
+				System.out.printf("Number of phones: %d %n%n", numOfPhone);
+				
+				break;
+			case 6:
+				System.out.print("GoodBye");
+				break;
 			}
 			// TODO: Figure out a way to reset selection variable. 
 		}while (selection != 6);
@@ -88,6 +119,7 @@ public class Menu {
 
 }
 /*
+ * brand, model, and memory
 Apple| iPhone 8 Plus, iPhone 8, iPhone X, iPhone 11
 32GB, 128GB, 256GB
 BlackBerry| Classic, Storm, Curve, Volt, Pearl
