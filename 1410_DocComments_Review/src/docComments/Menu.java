@@ -111,7 +111,7 @@ public class Menu {
 
 }
 /*
- * brand, model, and memory
+ * brand, model, and memory for adding phones testing purposes
 Apple| iPhone 8 Plus, iPhone 8, iPhone X, iPhone 11
 32GB, 128GB, 256GB
 BlackBerry| Classic, Storm, Curve, Volt, Pearl
