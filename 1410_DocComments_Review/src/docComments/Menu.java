@@ -18,19 +18,6 @@ public class Menu {
 		phones.add(phone3);
 		phones.add(phone4);
 		
-		
-		
-		/*System.out.println("1. Show all phones");
-		System.out.println("2. Add a phone");
-		System.out.println("3. Find a phone");
-		System.out.println("4. Delete a phone");
-		System.out.println("5. Number of phones");
-		System.out.println("6. Exit");
-		System.out.print("Enter your selection: ");
-		
-		selection = input.nextInt();
-		System.out.println("");*/
-		
 		do {
 			System.out.println("1. Show all phones");
 			System.out.println("2. Add a phone");
@@ -79,13 +66,12 @@ public class Menu {
 				System.out.print("Id: ");
 				searchId = input.nextInt();
 				
-				for(Phone el: phones) {
-					if(searchId == el.getId()) {
-						System.out.println(el);
-					}else if(searchId != el.getId()){
-						System.out.println("ID not found.");
-					}
-					//TODO: Enter logic check, "ID not found" to only print one time					
+				for(int i = 0; i < phones.size(); i++) {
+					if(searchId == phones.get(i).getId()) {
+						System.out.println(phones.get(i));
+					}else if(i == phones.size() - 1){
+						System.out.printf("The id %d could not be found.%n", searchId);
+					}					
 				}
 				
 				break;
@@ -95,10 +81,17 @@ public class Menu {
 				System.out.print("Id: ");
 				deleteId = input.nextInt();
 				
-				int deleteEl = phones.indexOf(deleteId);
-				System.out.println(deleteEl);
+				for(int i = 0; i < phones.size(); i++) {
+					if(deleteId == phones.get(i).getId()) {
+						System.out.printf("%s %s %d has been deleted.%n", phones.get(i).getBrand(), 
+								phones.get(i).getModel(), phones.get(i).getMemory());
+						phones.remove(i);
+					}else if(i == phones.size() - 1){
+						System.out.printf("The id %d could not be found.%n", deleteId);
+					}	
+				}
 				
-				break;//TODO: Need to find out how to find index based off ID and then do the phones.remove();
+				break;
 				
 			case 5:
 				int numOfPhone = 0;
@@ -111,8 +104,7 @@ public class Menu {
 			case 6:
 				System.out.print("GoodBye");
 				break;
-			}
-			// TODO: Figure out a way to reset selection variable. 
+			} 
 		}while (selection != 6);
 
 	}
