@@ -1,6 +1,20 @@
 package fitnessCalculator;
 
 public class Calculations {
+	
+	private static int heightToTotalInches(int feet, int inches) {
+		return (feet * 12) + inches;
+	}
+	
+	/**
+	 * Converts Centimeters to Meters for equations
+	 * @param CM
+	 * @return Meters
+	 */
+	private static double convertCmToM(int CM) {
+		return CM * 100;
+	}
+	
 	/**
 	 * This will calculate the users Body mass index
 	 * @param height
@@ -8,8 +22,20 @@ public class Calculations {
 	 * @param e
 	 * @return
 	 */
-	public int bmiCalculator(int height, int weight, UnitType e) {
-		return 0;
+	public static double bmiCalculator(Person person) {
+		int bmi;
+		if(person.getUnitType() == UnitType.US) {
+			double totalInches = heightToTotalInches(person.getHeightFt(), person.getHeightInch());
+			double weight = (person.getWeightLbs() * 703);
+			double height = totalInches * totalInches;
+			return weight / height;
+			
+		}
+		else {
+			double meters = convertCmToM(person.getHeightCm());
+			bmi = (int) (person.getWeightKg() / (meters * meters));
+		}
+		return bmi;
 	}
 	/**
 	 * This will calculate the users Basal metabolic rate
@@ -20,7 +46,7 @@ public class Calculations {
 	 * @param e US or METRIC
 	 * @return
 	 */
-	public int bmrCalculator(int height, int weight, int age, int gender, UnitType e) {
+	public static int bmrCalculator(int height, int weight, int age, int gender, UnitType e) {
 		return 0;
 	}
 	/**
@@ -32,7 +58,7 @@ public class Calculations {
 	 * @param e US or METRIC
 	 * @return
 	 */
-	public String bodyTypeCalculator(int bust, int waist, int hipHeight, int hipSize, UnitType e) {
+	public static String bodyTypeCalculator(int bust, int waist, int hipHeight, int hipSize, UnitType e) {
 		return null;
 	}
 	
@@ -40,10 +66,10 @@ public class Calculations {
 	 * This will generate a healthy weight based off the users height at weight
 	 * @param height
 	 * @param weight
-	 * @param e
-	 * @return
+	 * @param e US or METRIC
+	 * @return Healthy weight for the user to aim for
 	 */
-	public int healthyWeightCalculator(int height, int weight, UnitType e) {
+	public static int healthyWeightCalculator(int height, int weight, UnitType e) {
 		return 0;
 	}
 	

@@ -11,10 +11,74 @@ public class Person {
 	private int heightFt;
 	private int heightInch;
 	private int heightCm; 
-	private int bustSize;
-	private int waistSize;
-	private int hipHeight;
-	private int hipSize;
+	private int bustSizeInch;
+	private int waistSizeInch;
+	private int hipHeightInch;
+	private int hipSizeInch;
+	private int bustSizeCm;
+	private int waistSizeCm;
+	private int hipHeightCm;
+	private int hipSizeCm;
+	
+	/**
+	 * This is the constructor for US unit type
+	 * @param firstName
+	 * @param lastName
+	 * @param age
+	 * @param gender
+	 * @param weightLbs
+	 * @param heightFt
+	 * @param heightInch
+	 * @param bustSizeInch
+	 * @param waistSizeInch
+	 * @param hipHeightInch
+	 * @param hipSizeInch
+	 */
+	public Person(String firstName, String lastName, int age, int gender, int weightLbs,
+			int heightFt, int heightInch, int bustSizeInch, int waistSizeInch, int hipHeightInch, int hipSizeInch) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.gender = gender;
+		this.weightLbs = weightLbs;
+		this.heightFt = heightFt;
+		this.heightInch = heightInch;
+		this.bustSizeInch = bustSizeInch;
+		this.waistSizeInch = waistSizeInch;
+		this.hipHeightInch = hipHeightInch;
+		this.hipSizeInch = hipSizeInch;
+		this.e = UnitType.US;
+		
+	}
+	
+	/**
+	 * This is the constructor for the Metric unit type
+	 * @param firstName
+	 * @param lastName
+	 * @param age
+	 * @param gender
+	 * @param weightKg
+	 * @param heightCm
+	 * @param bustSizeCm
+	 * @param waistSizeCm
+	 * @param hipHeightCm
+	 * @param hipSizeCm
+	 */
+	public Person(String firstName, String lastName, int age, int gender, int weightKg,
+			int heightCm, int bustSizeCm, int waistSizeCm, int hipHeightCm, int hipSizeCm) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.gender = gender;
+		this.weightKg = weightKg;
+		this.heightCm = heightCm;
+		this.bustSizeCm = bustSizeCm;
+		this.waistSizeCm = waistSizeCm;
+		this.hipHeightCm = hipHeightCm;
+		this.hipSizeCm = hipSizeCm;
+		this.e = UnitType.METRIC;
+	}
+	
 	/**
 	 * @return the firstName
 	 */
@@ -69,30 +133,119 @@ public class Person {
 	public int getHeightCm() {
 		return heightCm;
 	}
+
 	/**
-	 * @return the bustSize
+	 * @return the bustSizeInch
 	 */
-	public int getBustSize() {
-		return bustSize;
+	public int getBustSizeInch() {
+		return bustSizeInch;
 	}
+
 	/**
-	 * @return the waistSize
+	 * @return the waistSizeInch
 	 */
-	public int getWaistSize() {
-		return waistSize;
+	public int getWaistSizeInch() {
+		return waistSizeInch;
 	}
+
 	/**
-	 * @return the hipHeight
+	 * @return the hipHeightInch
 	 */
-	public int getHipHeight() {
-		return hipHeight;
+	public int getHipHeightInch() {
+		return hipHeightInch;
 	}
+
 	/**
-	 * @return the hipSize
+	 * @return the hipSizeInch
 	 */
-	public int getHipSize() {
-		return hipSize;
+	public int getHipSizeInch() {
+		return hipSizeInch;
 	}
+
+	/**
+	 * @return the bustSizeCm
+	 */
+	public int getBustSizeCm() {
+		return bustSizeCm;
+	}
+
+	/**
+	 * @return the waistSizeCm
+	 */
+	public int getWaistSizeCm() {
+		return waistSizeCm;
+	}
+
+	/**
+	 * @return the hipHeightCm
+	 */
+	public int getHipHeightCm() {
+		return hipHeightCm;
+	}
+
+	/**
+	 * @return the hipSizeCm
+	 */
+	public int getHipSizeCm() {
+		return hipSizeCm;
+	}
+
+	/**
+	 * @param bustSizeInch the bustSizeInch to set
+	 */
+	public void setBustSizeInch(int bustSizeInch) {
+		this.bustSizeInch = bustSizeInch;
+	}
+
+	/**
+	 * @param waistSizeInch the waistSizeInch to set
+	 */
+	public void setWaistSizeInch(int waistSizeInch) {
+		this.waistSizeInch = waistSizeInch;
+	}
+
+	/**
+	 * @param hipHeightInch the hipHeightInch to set
+	 */
+	public void setHipHeightInch(int hipHeightInch) {
+		this.hipHeightInch = hipHeightInch;
+	}
+
+	/**
+	 * @param hipSizeInch the hipSizeInch to set
+	 */
+	public void setHipSizeInch(int hipSizeInch) {
+		this.hipSizeInch = hipSizeInch;
+	}
+
+	/**
+	 * @param bustSizeCm the bustSizeCm to set
+	 */
+	public void setBustSizeCm(int bustSizeCm) {
+		this.bustSizeCm = bustSizeCm;
+	}
+
+	/**
+	 * @param waistSizeCm the waistSizeCm to set
+	 */
+	public void setWaistSizeCm(int waistSizeCm) {
+		this.waistSizeCm = waistSizeCm;
+	}
+
+	/**
+	 * @param hipHeightCm the hipHeightCm to set
+	 */
+	public void setHipHeightCm(int hipHeightCm) {
+		this.hipHeightCm = hipHeightCm;
+	}
+
+	/**
+	 * @param hipSizeCm the hipSizeCm to set
+	 */
+	public void setHipSizeCm(int hipSizeCm) {
+		this.hipSizeCm = hipSizeCm;
+	}
+
 	/**
 	 * @param firstName the firstName to set
 	 */
@@ -147,31 +300,13 @@ public class Person {
 	public void setHeightCm(int heightCm) {
 		this.heightCm = heightCm;
 	}
-	/**
-	 * @param bustSize the bustSize to set
-	 */
-	public void setBustSize(int bustSize) {
-		this.bustSize = bustSize;
-	}
-	/**
-	 * @param waistSize the waistSize to set
-	 */
-	public void setWaistSize(int waistSize) {
-		this.waistSize = waistSize;
-	}
-	/**
-	 * @param hipHeight the hipHeight to set
-	 */
-	public void setHipHeight(int hipHeight) {
-		this.hipHeight = hipHeight;
-	}
-	/**
-	 * @param hipSize the hipSize to set
-	 */
-	public void setHipSize(int hipSize) {
-		this.hipSize = hipSize;
-	}
 	
+	/**
+	 * @return the e
+	 */
+	public UnitType getUnitType() {
+		return e;
+	}
 	
 
 }
