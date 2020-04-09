@@ -23,19 +23,22 @@ public class Calculations {
 	 * @return
 	 */
 	public static double bmiCalculator(Person person) {
-		int bmi;
+
 		if(person.getUnitType() == UnitType.US) {
 			double totalInches = heightToTotalInches(person.getHeightFt(), person.getHeightInch());
 			double weight = (person.getWeightLbs() * 703);
 			double height = totalInches * totalInches;
-			return weight / height;
+			double bmiUs = weight / height;
+			return Math.round(bmiUs * 100) / 100.0;
 			
 		}
 		else {
 			double meters = convertCmToM(person.getHeightCm());
-			bmi = (int) (person.getWeightKg() / (meters * meters));
+			double meterSquare = meters * meters;
+			double bmiMetric = (person.getWeightKg() / (meterSquare));
+			return bmiMetric ;
 		}
-		return bmi;
+		
 	}
 	/**
 	 * This will calculate the users Basal metabolic rate

@@ -7,7 +7,7 @@ public class Person {
 	private int age;
 	private int gender;
 	private int weightLbs;
-	private int weightKg;
+	private double weightKg;
 	private int heightFt;
 	private int heightInch;
 	private int heightCm; 
@@ -64,7 +64,7 @@ public class Person {
 	 * @param hipHeightCm
 	 * @param hipSizeCm
 	 */
-	public Person(String firstName, String lastName, int age, int gender, int weightKg,
+	public Person(String firstName, String lastName, int age, int gender, double weightKg,
 			int heightCm, int bustSizeCm, int waistSizeCm, int hipHeightCm, int hipSizeCm) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -112,7 +112,7 @@ public class Person {
 	/**
 	 * @return the weightKg
 	 */
-	public int getWeightKg() {
+	public double getWeightKg() {
 		return weightKg;
 	}
 	/**
