@@ -10,15 +10,15 @@ public class Person {
 	private double weightKg;
 	private int heightFt;
 	private int heightInch;
-	private int heightCm; 
+	private double heightCm; 
 	private int bustSizeInch;
 	private int waistSizeInch;
 	private int hipHeightInch;
 	private int hipSizeInch;
-	private int bustSizeCm;
-	private int waistSizeCm;
-	private int hipHeightCm;
-	private int hipSizeCm;
+	private double bustSizeCm;
+	private double waistSizeCm;
+	private double hipHeightCm;
+	private double hipSizeCm;
 	
 	/**
 	 * This is the constructor for US unit type
@@ -65,7 +65,7 @@ public class Person {
 	 * @param hipSizeCm
 	 */
 	public Person(String firstName, String lastName, int age, int gender, double weightKg,
-			int heightCm, int bustSizeCm, int waistSizeCm, int hipHeightCm, int hipSizeCm) {
+			double heightCm, double bustSizeCm, double waistSizeCm, double hipHeightCm, double hipSizeCm) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -130,7 +130,7 @@ public class Person {
 	/**
 	 * @return the heightCm
 	 */
-	public int getHeightCm() {
+	public double getHeightCm() {
 		return heightCm;
 	}
 
@@ -165,28 +165,28 @@ public class Person {
 	/**
 	 * @return the bustSizeCm
 	 */
-	public int getBustSizeCm() {
+	public double getBustSizeCm() {
 		return bustSizeCm;
 	}
 
 	/**
 	 * @return the waistSizeCm
 	 */
-	public int getWaistSizeCm() {
+	public double getWaistSizeCm() {
 		return waistSizeCm;
 	}
 
 	/**
 	 * @return the hipHeightCm
 	 */
-	public int getHipHeightCm() {
+	public double getHipHeightCm() {
 		return hipHeightCm;
 	}
 
 	/**
 	 * @return the hipSizeCm
 	 */
-	public int getHipSizeCm() {
+	public double getHipSizeCm() {
 		return hipSizeCm;
 	}
 
@@ -221,28 +221,28 @@ public class Person {
 	/**
 	 * @param bustSizeCm the bustSizeCm to set
 	 */
-	public void setBustSizeCm(int bustSizeCm) {
+	public void setBustSizeCm(double bustSizeCm) {
 		this.bustSizeCm = bustSizeCm;
 	}
 
 	/**
 	 * @param waistSizeCm the waistSizeCm to set
 	 */
-	public void setWaistSizeCm(int waistSizeCm) {
+	public void setWaistSizeCm(double waistSizeCm) {
 		this.waistSizeCm = waistSizeCm;
 	}
 
 	/**
 	 * @param hipHeightCm the hipHeightCm to set
 	 */
-	public void setHipHeightCm(int hipHeightCm) {
+	public void setHipHeightCm(double hipHeightCm) {
 		this.hipHeightCm = hipHeightCm;
 	}
 
 	/**
 	 * @param hipSizeCm the hipSizeCm to set
 	 */
-	public void setHipSizeCm(int hipSizeCm) {
+	public void setHipSizeCm(double hipSizeCm) {
 		this.hipSizeCm = hipSizeCm;
 	}
 
@@ -279,7 +279,7 @@ public class Person {
 	/**
 	 * @param weightKg the weightKg to set
 	 */
-	public void setWeightKg(int weightKg) {
+	public void setWeightKg(double weightKg) {
 		this.weightKg = weightKg;
 	}
 	/**
@@ -297,7 +297,7 @@ public class Person {
 	/**
 	 * @param heightCm the heightCm to set
 	 */
-	public void setHeightCm(int heightCm) {
+	public void setHeightCm(double heightCm) {
 		this.heightCm = heightCm;
 	}
 	
