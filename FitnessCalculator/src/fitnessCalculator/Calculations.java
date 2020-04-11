@@ -43,7 +43,38 @@ public class Calculations {
 	 * @return
 	 */
 	public static int bmrCalculator(Person person) {
-		return 0;
+		int bmr = 0;
+		
+		if(person.getUnitType() == UnitType.US) {
+			//Checking woman BMR in US unit type
+			if(person.getGender() == 0) {
+				bmr = (int) ((4.536 * person.getWeightLbs()) + (15.88 * heightToTotalInches(person.getHeightFt(), 
+						person.getHeightInch())) - (5 * person.getAge()) - 161);
+			}
+			//Checking men BMR in US unit type
+			else {
+				
+				bmr = (int) ((4.536 * person.getWeightLbs()) + (15.88 * heightToTotalInches(person.getHeightFt(), 
+						person.getHeightInch())) - (5 * person.getAge()) + 5);
+				
+			}
+			
+		}
+		
+		else {
+			//Checking woman BMR in Metric unit type
+			if(person.getGender() == 0) {
+				bmr = (int) ((10 * person.getWeightKg()) + (6.25 * person.getHeightCm()) - (5 * person.getAge()) - 161);
+			}
+			//Checking men BMR in Metric unit type
+			else {
+				bmr = (int) ((10 * person.getWeightKg()) + (6.25 * person.getHeightCm()) - (5 * person.getAge()) + 5);
+			}
+
+		}
+		
+		
+		return bmr;
 	}
 	/**
 	 * This will generate the body type of the user
