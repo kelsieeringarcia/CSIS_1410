@@ -13,12 +13,13 @@ public class Person {
 	private double heightCm; 
 	private int bustSizeInch;
 	private int waistSizeInch;
-	private int hipHeightInch;
+	private int highHipInch;
 	private int hipSizeInch;
 	private double bustSizeCm;
 	private double waistSizeCm;
-	private double hipHeightCm;
+	private double highHipCm;
 	private double hipSizeCm;
+	
 	
 	/**
 	 * This is the constructor for US unit type
@@ -35,7 +36,7 @@ public class Person {
 	 * @param hipSizeInch
 	 */
 	public Person(String firstName, String lastName, int age, int gender, int weightLbs,
-			int heightFt, int heightInch, int bustSizeInch, int waistSizeInch, int hipHeightInch, int hipSizeInch) {
+			int heightFt, int heightInch, int bustSizeInch, int waistSizeInch, int highHipInch, int hipSizeInch) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -45,7 +46,7 @@ public class Person {
 		this.heightInch = heightInch;
 		this.bustSizeInch = bustSizeInch;
 		this.waistSizeInch = waistSizeInch;
-		this.hipHeightInch = hipHeightInch;
+		this.highHipInch = highHipInch;
 		this.hipSizeInch = hipSizeInch;
 		this.e = UnitType.US;
 		
@@ -65,7 +66,7 @@ public class Person {
 	 * @param hipSizeCm
 	 */
 	public Person(String firstName, String lastName, int age, int gender, double weightKg,
-			double heightCm, double bustSizeCm, double waistSizeCm, double hipHeightCm, double hipSizeCm) {
+			double heightCm, double bustSizeCm, double waistSizeCm, double highHipCm, double hipSizeCm) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -74,7 +75,7 @@ public class Person {
 		this.heightCm = heightCm;
 		this.bustSizeCm = bustSizeCm;
 		this.waistSizeCm = waistSizeCm;
-		this.hipHeightCm = hipHeightCm;
+		this.highHipCm = highHipCm;
 		this.hipSizeCm = hipSizeCm;
 		this.e = UnitType.METRIC;
 	}
@@ -152,7 +153,7 @@ public class Person {
 	 * @return the hipHeightInch
 	 */
 	public int getHipHeightInch() {
-		return hipHeightInch;
+		return highHipInch;
 	}
 
 	/**
@@ -180,7 +181,7 @@ public class Person {
 	 * @return the hipHeightCm
 	 */
 	public double getHipHeightCm() {
-		return hipHeightCm;
+		return highHipCm;
 	}
 
 	/**
@@ -208,7 +209,7 @@ public class Person {
 	 * @param hipHeightInch the hipHeightInch to set
 	 */
 	public void setHipHeightInch(int hipHeightInch) {
-		this.hipHeightInch = hipHeightInch;
+		this.highHipInch = hipHeightInch;
 	}
 
 	/**
@@ -236,7 +237,7 @@ public class Person {
 	 * @param hipHeightCm the hipHeightCm to set
 	 */
 	public void setHipHeightCm(double hipHeightCm) {
-		this.hipHeightCm = hipHeightCm;
+		this.highHipCm = hipHeightCm;
 	}
 
 	/**
