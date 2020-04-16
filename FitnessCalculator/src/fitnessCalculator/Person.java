@@ -7,14 +7,14 @@ public class Person {
 	private int age;
 	private int gender;
 	private int weightLbs;
-	private double weightKg;
 	private int heightFt;
 	private int heightInch;
-	private double heightCm; 
 	private int bustSizeInch;
 	private int waistSizeInch;
 	private int highHipInch;
 	private int hipSizeInch;
+	private double weightKg;
+	private double heightCm; 
 	private double bustSizeCm;
 	private double waistSizeCm;
 	private double highHipCm;

@@ -78,10 +78,42 @@ public class Calculations {
 	}
 	/**
 	 * This will generate the body type of the user
-	 * @return
+	 * @return String of what the body type category is 
 	 */
 	public static String bodyTypeCalculator(Person person) {
-		return null;
+		String bodyType = null;
+		if((person.getBustSizeInch() - person.getHipSizeInch()) <= 1 && 
+				(person.getHipSizeInch() - person.getBustSizeInch()) < 3.6 && 
+				(person.getBustSizeInch() - person.getWaistSizeInch()) >= 9 || 
+				(person.getHipSizeInch() - person.getWaistSizeInch()) >= 10) {
+			bodyType = "HourGlass";
+		}else if((person.getHipSizeInch() - person.getBustSizeInch()) >= 3.6 
+				&& (person.getHipSizeInch() - person.getBustSizeInch()) < 10
+				&& (person.getHipSizeInch() - person.getWaistSizeInch()) >= 9 
+				&& (person.getHipHeightInch() / person.getWaistSizeInch()) < 1.193) {
+			bodyType = "Bottom hourglass";
+		}else if((person.getBustSizeInch() - person.getHipSizeInch()) > 1
+				&& (person.getBustSizeInch() - person.getHipSizeInch()) < 10 
+				&& (person.getBustSizeInch() - person.getWaistSizeInch()) >= 9){
+			bodyType = "Top hourglass";
+		}else if((person.getHipSizeInch() - person.getBustSizeInch()) > 2
+				&& (person.getHipSizeInch() - person.getWaistSizeInch()) >= 7 
+				&& (person.getHipHeightInch() / person.getWaistSizeInch()) >= 1.193) {
+			bodyType = "Spoon";
+		}else if((person.getHipSizeInch() - person.getBustSizeInch()) >= 3.6
+				&& (person.getHipSizeInch() - person.getWaistSizeInch()) < 9) {
+			bodyType = "Triangle";
+		}else if((person.getBustSizeInch() - person.getHipSizeInch()) >= 3.6
+				&& (person.getBustSizeInch() - person.getWaistSizeInch()) < 9) {
+			bodyType = "Inverted Triangle";
+		}else if((person.getHipSizeInch() - person.getBustSizeInch()) < 3.6
+				&& (person.getBustSizeInch() - person.getHipSizeInch()) < 3.6
+				&& (person.getBustSizeInch() - person.getWaistSizeInch()) < 9
+				&& (person.getHipSizeInch() - person.getWaistSizeInch()) < 10) {
+			bodyType = "Rectangle";
+		}
+		
+		return bodyType;
 	}
 	
 	/**
