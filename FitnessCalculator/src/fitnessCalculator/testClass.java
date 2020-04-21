@@ -4,7 +4,7 @@ public class testClass {
 
 	public static void main(String[] args) {
 		//BMI calculator for US and metric test
-		Person p1 = new Person("Sue", "Smith", 25, 0, 160, 5, 10, 0, 0, 0, 0);
+		Person p1 = new Person("Sue", "Smith", 25, 0, 160, 5, 10, 40, 26, 34, 36);
 		Person p2 = new Person("John", "Doe" , 25, 1, 65, 180, 0, 0, 0, 0);
 		
 		//BMR calculator test for US woman and men
@@ -21,12 +21,16 @@ public class testClass {
 		System.out.println();
 		
 		System.out.println("BMR test for a Woman in US Unit: " + Calculations.bmrCalculator(p3));
-		System.out.println("BMR test for a Man in US Unit: " +Calculations.bmrCalculator(p4));
+		System.out.println("BMR test for a Man in US Unit: " + Calculations.bmrCalculator(p4));
 		
 		System.out.println();
 		
-		System.out.println("BMR test for a Woman in Metric Unit: " +Calculations.bmrCalculator(p5));
-		System.out.println("BMR test for a Man in Metric Unit: " +Calculations.bmrCalculator(p6));
+		System.out.println("BMR test for a Woman in Metric Unit: " + Calculations.bmrCalculator(p5));
+		System.out.println("BMR test for a Man in Metric Unit: " + Calculations.bmrCalculator(p6));
+		
+		System.out.println();
+		
+		System.out.println("Body type calculated: " + Calculations.bodyTypeCalculator(p1));
 
 	}
 
