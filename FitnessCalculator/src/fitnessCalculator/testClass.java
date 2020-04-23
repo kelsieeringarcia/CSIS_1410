@@ -32,6 +32,10 @@ public class testClass {
 		
 		System.out.println("Body type calculated in Inches: " + Calculations.bodyTypeCalculator(p1));
 		System.out.println("Body type calculated in CM: " + Calculations.bodyTypeCalculator(p2));
+		
+		System.out.println();
+		
+		System.out.println("Healthy weight: " + Calculations.healthyWeightCalculator(p1));
 
 	}
 
