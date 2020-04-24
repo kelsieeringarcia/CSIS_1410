@@ -15,6 +15,10 @@ public class testClass {
 		Person p5 = new Person("John", "Doe" , 25, 0, 60, 180, 0, 0, 0, 0);
 		Person p6 = new Person("John", "Doe" , 25, 1, 60, 180, 0, 0, 0, 0);
 		
+		
+		Person p7 = new Person("Sue", "Smith", 25, 0, 120, 4, 11, 40, 36, 36, 40);
+		Person p8 = new Person("John", "Doe" , 25, 1, 50, 150, 90, 50, 90, 70);
+		
 		System.out.println("BMI in US Unit: " + Calculations.bmiCalculator(p1));
 		System.out.println("BMI in Metric Unit: " + Calculations.bmiCalculator(p2));
 		
@@ -35,7 +39,7 @@ public class testClass {
 		
 		System.out.println();
 		
-		System.out.println("Healthy weight: " + Calculations.healthyWeightCalculator(p1));
+		System.out.println("Healthy weight: " + Calculations.healthyWeightCalculator(p7));
 
 	}
 
